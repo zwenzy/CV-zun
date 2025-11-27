@@ -1,153 +1,227 @@
-/* --- GLOBAL VARIABLES & RESET --- */
+/* --- 1. IMPORT FONT (GEOMETRIC & MODERN) --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Lexend+Mega:wght@700&display=swap');
+
+/* --- NEO-BRUTALISM VARIABLES --- */
 :root {
-  --primary: #2563eb;       /* Biru Utama */
-  --primary-dark: #1e40af;  /* Biru Gelap */
-  --secondary: #64748b;     /* Abu-abu Teks */
-  --bg-light: #f8fafc;      /* Background Halaman */
-  --card-bg: #ffffff;       /* Background Kartu */
-  --border: #e2e8f0;        /* Warna Garis */
+  --nb-yellow: #ffdf5d;     /* Kuning Cerah */
+  --nb-purple: #b388ff;     /* Ungu Pastel */
+  --nb-pink: #ff90e8;       /* Pink Neon */
+  --nb-blue: #54a0ff;       /* Biru Langit */
+  --nb-black: #000000;      /* Hitam Pekat */
+  --nb-bg: #fffbf0;         /* Background Krem Tipis */
+  
+  --border-thick: 3px solid var(--nb-black);
+  --shadow-hard: 6px 6px 0px var(--nb-black);
+  
+  --font-heading: 'Lexend Mega', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--nb-bg);
+  color: var(--nb-black);
+  font-family: var(--font-body);
+  /* Pattern Dot Halus */
+  background-image: radial-gradient(var(--nb-black) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .container {
-  max-width: 100%;       /* Ubah dari 800px menjadi 100% */
-  margin: 0;             /* Hapus auto agar tidak di tengah */
-  padding: 2rem;         /* Beri jarak sedikit biar gak nempel banget */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
+
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+}
+
 /* --- 1. PROFILE SECTION --- */
 .profile-card {
   background: white;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid var(--border);
-  margin-bottom: 2rem;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  margin-bottom: 3rem;
+  transition: transform 0.2s;
+}
+
+/* Efek saat diklik seolah ditekan */
+.profile-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--nb-black);
 }
 
 .profile-header {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: var(--nb-yellow);
   padding: 2.5rem;
-  color: white;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
+  border-bottom: var(--border-thick);
+  position: relative;
+}
+
+/* Dekorasi Pola di Header */
+.profile-header::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; width: 50px;
+  background-image: repeating-linear-gradient(45deg, var(--nb-black) 0, var(--nb-black) 2px, transparent 0, transparent 50%);
+  background-size: 10px 10px;
+  opacity: 0.1;
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 1rem;
-  border: 4px solid rgba(255,255,255,0.3);
+  width: 140px;
+  height: 140px;
   object-fit: cover;
+  border-radius: 0; /* Kotak tegas */
+  border: var(--border-thick);
   background: white;
+  box-shadow: 4px 4px 0 white, 8px 8px 0 var(--nb-black); /* Double shadow */
 }
 
 .profile-info h1 {
-  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .profile-headline {
-  color: #bfdbfe;
+  font-weight: bold;
+  background: var(--nb-black);
+  color: white;
+  display: inline-block;
+  padding: 4px 10px;
   margin-bottom: 1rem;
+  transform: rotate(-1deg);
 }
 
 .tag-container {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .glass-tag {
-  background: rgba(255,255,255,0.2);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  backdrop-filter: blur(4px);
+  background: white;
+  border: 2px solid var(--nb-black);
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 0 var(--nb-black);
 }
 
 .profile-meta {
   display: flex;
   gap: 1.5rem;
-  font-size: 0.875rem;
-  color: #dbeafe;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .meta-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: rgba(255,255,255,0.5);
+  padding: 2px 8px;
+  border: 2px solid transparent;
+}
+
+.meta-item:hover {
+  border: 2px solid var(--nb-black);
+  background: white;
 }
 
 .profile-body {
   padding: 2rem 2.5rem;
+  background: white;
 }
 
+/* TOMBOL KEREN */
 .btn-portfolio {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  background: var(--nb-purple);
+  color: var(--nb-black);
+  padding: 1rem 2rem;
   text-decoration: none;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
   margin-top: 1rem;
-  transition: background 0.2s;
+  transition: all 0.1s;
 }
 
 .btn-portfolio:hover {
-  background: var(--primary-dark);
+  background: var(--nb-pink);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--nb-black);
 }
 
-/* Responsif Profile untuk HP */
+.btn-portfolio:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--nb-black);
+}
+
 @media (max-width: 600px) {
   .profile-header {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1rem;
   }
-  .profile-meta {
-    justify-content: center;
-  }
+  .profile-meta { justify-content: center; }
 }
 
 /* --- 2. SKILLS SECTION --- */
 .section-wrapper {
-  background: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-  margin-bottom: 2rem;
-}
-
-.section-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 1.5rem;
+  background: var(--nb-blue);
+  padding: 2px; /* Border trick */
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  margin-bottom: 3rem;
 }
 
 .skills-grid {
+  background: white; /* Isi dalam putih */
+  padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  border-left: 2px solid var(--nb-black); /* Aksen garis */
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--nb-black);
+  background: var(--nb-blue);
+  padding: 1rem 2rem;
+  margin: 0;
+  border-bottom: var(--border-thick);
+  text-transform: uppercase;
 }
 
 .skill-card {
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
+  border: 2px solid var(--nb-black);
+  background: white;
   padding: 1.25rem;
-  transition: transform 0.2s;
+  transition: all 0.2s;
+  position: relative;
 }
 
 .skill-card:hover {
-  transform: translateY(-3px);
-  border-color: #cbd5e1;
+  background: var(--nb-yellow);
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 var(--nb-black);
 }
 
 .skill-header {
@@ -163,82 +237,91 @@
   gap: 1rem;
 }
 
+.skill-icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+}
+
 .skill-icon-box img {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
 }
 
 .badge-main {
-  background: #eff6ff;
-  color: var(--primary);
+  background: var(--nb-black);
+  color: white;
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  text-transform: uppercase;
 }
 
 .progress-bg {
   width: 100%;
-  height: 8px;
-  background: #f1f5f9;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 0.5rem;
+  height: 12px;
+  background: white;
+  border: 2px solid var(--nb-black);
+  margin-top: 0.8rem;
 }
 
 .progress-fill {
   height: 100%;
-  background: var(--primary);
-  border-radius: 10px;
+  background: var(--nb-pink);
+  border-right: 2px solid var(--nb-black);
 }
 
 /* --- 3. EXPERIENCE SECTION --- */
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 0; 
+  gap: 1.5rem; 
 }
 
 .timeline-item {
   display: flex;
   gap: 1.5rem;
   position: relative;
-  padding-bottom: 2rem; /* Jarak antar item */
 }
 
-/* Garis vertikal */
+/* Garis vertikal tebal */
 .timeline-line {
   position: absolute;
-  left: 20px; /* Posisi tengah icon */
-  top: 40px;
+  left: 24px;
+  top: 0;
   bottom: 0;
-  width: 2px;
-  background-color: var(--border);
+  width: 4px;
+  background-color: var(--nb-black);
   z-index: 0;
 }
 
 .timeline-icon {
-  width: 40px;
-  height: 40px;
-  background: #e0f2fe;
-  color: var(--primary);
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: var(--nb-yellow);
+  color: var(--nb-black);
+  border: var(--border-thick);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  z-index: 10; /* Supaya di atas garis */
-  border: 4px solid white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 10;
+  box-shadow: 2px 2px 0 var(--nb-black);
 }
 
 .timeline-content {
   flex: 1;
   background: white;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  padding: 1.25rem;
+  border: var(--border-thick);
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.timeline-content:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--nb-black);
 }
 
 .exp-header {
@@ -246,25 +329,38 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exp-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .exp-badge {
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 600;
-  text-transform: capitalize;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border: 2px solid var(--nb-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: white;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
-/* Warna Badge Experience */
-.exp-badge.internship { background: #dbeafe; color: #1e40af; }
-.exp-badge.organization { background: #f3e8ff; color: #7e22ce; }
-.exp-badge.project { background: #dcfce7; color: #15803d; }
+
+/* Warna-warni Badge */
+.exp-badge.internship { background: var(--nb-blue); color: white; }
+.exp-badge.organization { background: var(--nb-purple); color: white; }
+.exp-badge.project { background: var(--nb-pink); color: black; }
 
 .exp-date {
-  font-size: 0.75rem;
-  color: #94a3b8;
+  font-weight: bold;
+  color: #666;
   display: block;
   margin-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
 }
 
 .tech-stack {
@@ -275,9 +371,9 @@
 }
 
 .tech-tag {
-  background: #f1f5f9;
-  color: #475569;
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 4px;
+  background: var(--nb-black);
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  font-weight: bold;
 }
