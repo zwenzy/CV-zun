@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './components/components.css';
 import Profile from './components/Profile';
 import Skills from './components/Skills';
 
