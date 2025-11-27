@@ -1,4 +1,6 @@
-cls1. # Deskripsi aplikasi
+
+1. # Deskripsi aplikasi
+
     Aplikasi ini adalah Web Portfolio / CV Digital modern berbasis React JS yang dirancang untuk menampilkan profil mahasiswa secara profesional, interaktif, dan mudah dikelola. Aplikasi ini menggunakan konsep Data-Driven, di mana seluruh konten (Profil, Skill, Pengalaman) tidak ditulis langsung di dalam kode program (Hardcode), melainkan diambil dari file data terpisah (`JSON`). Hal ini memudahkan pengguna untuk memperbarui CV.
 
     # Teknologi Utama:
@@ -21,6 +23,5 @@ cls1. # Deskripsi aplikasi
     - jalankan server lokal (npm run dev)
 
 3. # Link deployment
-
 
 4. # Screenshot tampilan
