@@ -1,17 +1,17 @@
 {
   "id": 12,
-  "slug": "aulia-pratama-2103010023",
+  "slug": "zunaizah-L200239281",
 
   "profile": {
-    "full_name": "Aulia Pratama",
-    "nim": "2103010023",
+    "full_name": "Zunaizah Zulfikar",
+    "nim": "L200239281",
     "prodi": "Teknik Informatika",
-    "angkatan": "2021",
-    "photo_url": "https://cdn.talenta-ums.ac.id/photos/aulia.jpg",
+    "angkatan": "2023",
+    "photo_url": "/src/assets/kucing.jpg",
     "headline": "Fullstack Web Developer | React & Django Enthusiast",
     "short_bio": "Mahasiswa UMS dengan minat pada pengembangan web fullstack.",
-    "location": "Surakarta, Jawa Tengah",
-    "portfolio_url": "https://auliapratama.com"
+    "location": "Sukoharjo, Jawa Tengah",
+    "portfolio_url": "localhost:5173"
   },
 
   "skills": [
@@ -19,27 +19,41 @@
       "id": 1,
       "name": "ReactJS",
       "category": "technical",
-      "level": "advanced",
-      "is_main": true,
-      "years_of_experience": 2,
+      "level": "beginner",
+      "is_main": false,
       "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
       "id": 2,
       "name": "Django REST Framework",
       "category": "technical",
-      "level": "intermediate",
-      "is_main": true,
-      "years_of_experience": 1,
+      "level": "beginner",
+      "is_main": false,
       "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
     },
     {
       "id": 3,
-      "name": "Tailwind CSS",
+      "name": "Bootsraps CSS",
       "category": "technical",
-      "level": "intermediate",
+      "level": "beginner",
       "is_main": false,
-      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+    },
+    {
+      "id": 4,
+      "name": "PHP Teamwork",
+      "category": "technical",
+      "level": "default",
+      "is_main": false,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+    },
+    {
+      "id": 5,
+      "name": "Python",
+      "category": "technical",
+      "level": "default",
+      "is_main": false,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
     }
   ],
 
@@ -58,13 +72,13 @@
     },
     {
       "id": 102,
-      "title": "Head of Web Development Division",
-      "organization": "UKM Informatika UMS",
+      "title": "Member of Ikatan Mahasiswa Muhammadiyah",
+      "organization": "Ikatan Mahasiswa Muhammadiyah UMS",
       "experience_type": "organization",
       "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
-      "is_current": false,
-      "description": "Mengkoordinasi tim pengembang web untuk kegiatan UKM.",
+      "end_date": "now",
+      "is_current": true,
+      "description": "",
       "image_url": "https://cdn.example.com/logo/ukm-informatika.png"
     },
     {
@@ -82,7 +96,7 @@
   ],
 
   "statistics": {
-    "views_count": 127,
+    "views_count": 17,
     "profile_complete_percent": 92
   }
 }
