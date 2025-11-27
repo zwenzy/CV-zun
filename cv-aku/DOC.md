@@ -23,5 +23,7 @@
     - jalankan server lokal (npm run dev)
 
 3. # Link deployment
+    https://cv-zun.vercel.app/ 
 
 4. # Screenshot tampilan
+    [screenshot](./screenshot_cv-aku.png) 
