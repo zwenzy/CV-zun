@@ -8,8 +8,8 @@
     "prodi": "Teknik Informatika",
     "angkatan": "2023",
     "photo_url": "/src/assets/kucing.jpg",
-    "headline": "Fullstack Web Developer | React & Django Enthusiast",
-    "short_bio": "Mahasiswa UMS dengan minat pada pengembangan web fullstack.",
+    "headline": "Mahasiswa Teknik Informatika UMS | Pengembang Web Fullstack & Analisis Data",
+    "short_bio": "Mahasiswa aktif UMS semester 5 dengan minat pada pengembangan web fullstack, dan analisis data .",
     "location": "Sukoharjo, Jawa Tengah",
     "portfolio_url": "localhost:5173"
   },
@@ -54,21 +54,28 @@
       "level": "default",
       "is_main": false,
       "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    },
+    {
+      "id": 6,
+      "name": "MySQL", 
+      "category": "data",
+      "level": "default",
+      "is_main": true, 
+      "years_of_experience": 1,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
     }
   ],
 
   "experiences": [
     {
       "id": 101,
-      "title": "Frontend Developer Intern",
-      "organization": "PT Digital Solusi Nusantara",
-      "experience_type": "internship",
-      "start_date": "2024-07-01",
-      "end_date": "2024-09-30",
+      "title": "Desain Aplikasi Alquran",
+      "organization": "MTQ UMS 2025",
+      "experience_type": "audition",
+      "start_date": "2025-07-09",
       "is_current": false,
-      "description": "Mengembangkan antarmuka dashboard internal menggunakan React.",
-      "technologies": ["ReactJS", "Tailwind CSS"],
-      "image_url": "https://cdn.example.com/company/digitalsolusi.png"
+      "description": "Merancang Aplikasi Desain Alquran.",
+      "technologies": ["Figma", "DB Desainer", "Diagram"]
     },
     {
       "id": 102,
@@ -78,20 +85,18 @@
       "start_date": "2023-01-01",
       "end_date": "now",
       "is_current": true,
-      "description": "",
-      "image_url": "https://cdn.example.com/logo/ukm-informatika.png"
+      "description": ""
     },
     {
       "id": 103,
-      "title": "Backend Developer (Freelance)",
-      "organization": "Freelance Project",
+      "title": "Web Inventaris Kota",
+      "organization": "Project",
       "experience_type": "project",
-      "start_date": "2024-10-01",
+      "start_date": "2025-06-01",
       "end_date": null,
       "is_current": true,
-      "description": "Membangun API backend UMKM menggunakan DRF dan PostgreSQL.",
-      "technologies": ["Django", "DRF", "PostgreSQL"],
-      "image_url": "https://cdn.example.com/projects/umkm-inventory.png"
+      "description": "Merancang web peminjaman inventaris kota",
+      "technologies": ["Figma", "DB Desainer", "Diagram"]
     }
   ],
 
